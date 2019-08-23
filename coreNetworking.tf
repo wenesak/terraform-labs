@@ -30,18 +30,19 @@ resource "azurerm_virtual_network" "core" {
     address_prefix = "10.20.1.0/24"
   }
 
-  #subnet {
-  #  name           = "dev"
-  #  address_prefix = "10.20.2.0/24"
-  #}
+  subnet {
+    name           = "dev"
+    address_prefix = "10.20.2.0/24"
+  }
 } 
 
-resource "azurerm_subnet" "dev" {
+/*resource "azurerm_subnet" "dev" {
    name                 = "dev"
    virtual_network_name = "${azurerm_virtual_network.core.name}"
    resource_group_name = "${azurerm_resource_group.nsgs1.name}"
    address_prefix       = "10.20.2.0/24"
-}
+} */
+
 # resource "azurerm_virtual_network_gateway" "vpnGateway" {
 #     name                = "vpnGateway"
 #     location            = "${azurerm_resource_group.core.location}"

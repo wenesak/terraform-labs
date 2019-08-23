@@ -6,7 +6,7 @@ variable "loc" {
 variable "webapplocs" {
   description = "approve regions"
   type = "list"
-  default = [ "centralus", "southcentralus", "northcentralus" ]
+  default = [ "southcentralus", "centralus", "northcentralus" ]
 }
 
 
